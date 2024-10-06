@@ -123,13 +123,13 @@ python cnpj_extractor.py
 
 This will:
 - Download the partitioned datasets from the latest available month on the server.
-- Save them to the folder defined in `data_incoming`.
+- Save them to the folder `data_incoming`.
 
 ### Part 2: Data Merging
 
 After extracting the data, the second part involves merging the partitioned tables into consolidated datasets.
 
-To perform the merging, run the `cnpj_merger.py` script. This script reads the partitioned data files, processes them, and saves the merged data into the `data_outgoing` folder in the format you specified in `config.yaml`.
+To perform the merging, run the `cnpj_merger.py` script. This script reads the data files, processes them, and saves the merged data into the `data_outgoing` folder in the format you specified in `config.yaml`.
 
 **Run the merging process:**
 
