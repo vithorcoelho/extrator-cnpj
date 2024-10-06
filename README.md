@@ -1,172 +1,165 @@
 # CNPJ Data Extractor
 
-### Project Overview
+## Visão Geral do Projeto
+O CNPJ Data Extractor é um projeto de código aberto que automatiza o processo de download, extração e transformação de conjuntos de dados do CNPJ (Cadastro Nacional da Pessoa Jurídica) a partir de fontes públicas disponíveis. O projeto é dividido em duas partes:
 
-The **CNPJ Data Extractor** is an open-source project that automates the process of downloading, extracting, and transforming CNPJ (Brazilian tax ID) datasets from publicly available sources. The project is divided into two parts:
-1. **Data Extraction**: Automatically download and extract the partitioned CNPJ datasets.
-2. **Data Merging**: Combine the partitioned tables into consolidated datasets for further processing or analysis.
+1. **Extração de Dados**: Baixar e extrair automaticamente os conjuntos de dados do CNPJ particionados.
+2. **Unificação de Dados**: Combinar as tabelas particionadas em conjuntos de dados consolidados para processamento ou análise posterior.
 
-### Features
+## Funcionalidades
 
-- **Automated Data Download**: Multithreaded downloading of datasets with support for remote file size checking to avoid redundant downloads.
-- **Efficient Data Processing**: Handles large partitioned datasets and consolidates them into a single output.
-- **Flexible Export Formats**: Data can be exported in CSV, Parquet, JSON, or Feather formats for easy integration with databases and analytics platforms.
-- **Modular Configuration**: Paths, logging, and export options are easily adjustable through a configuration file (`config.yaml`).
+- **Download Automático de Dados**: Download multithreaded dos conjuntos de dados com suporte para verificação remota do tamanho do arquivo, evitando downloads redundantes.
+- **Processamento Eficiente de Dados**: Lida com grandes conjuntos de dados particionados e os consolida em uma única saída.
+- **Formatos de Exportação Flexíveis**: Os dados podem ser exportados nos formatos CSV, Parquet, JSON ou Feather para fácil integração com bancos de dados e plataformas de análise.
+- **Configuração Modular**: Caminhos, logs e opções de exportação são facilmente ajustáveis por meio de um arquivo de configuração (`config.yaml`).
 
-### Project Structure
+## Estrutura do Projeto
 
-```bash
-.
-├── config
-  ├── config.yaml         # Configuration file for paths, formats, and data types
-├── data_incoming         # Folder for incoming ZIP data files
-├── data_outgoing         # Folder for processed output data
-├── logs                  # Folder for log files
-├── scrips                # Folder for python scripts
-  ├── cnpj_extractor.py   # Script for data extraction (part 1)
-  ├── cnpj_merger.py      # Script for merging partitioned tables (part 2)
-├── README.md             # Project documentation
+```
+.  
+├── config  
+  ├── config.yaml         # Arquivo de configuração para caminhos, formatos e tipos de dados  
+├── data_incoming         # Pasta para arquivos ZIP de dados recebidos  
+├── data_outgoing         # Pasta para os dados processados de saída  
+├── logs                  # Pasta para arquivos de log  
+├── scripts               # Pasta para scripts em Python  
+  ├── cnpj_extractor.py   # Script para extração de dados (parte 1)  
+  ├── cnpj_merger.py      # Script para unificação das tabelas particionadas (parte 2)  
+├── README.md             # Documentação do projeto  
 ```
 
-### Getting Started
+## Iniciando o Projeto
 
-#### Prerequisites
+### Pré-requisitos
 
-- **Python** 3.8+
-- The following Python packages:
-  - `pandas`
-  - `pyyaml`
-  - `requests`
-  - `bs4` (BeautifulSoup)
-  - `tqdm`
+- Python 3.8+
+- Os seguintes pacotes Python:
+  - pandas
+  - pyyaml
+  - requests
+  - bs4 (BeautifulSoup)
+  - tqdm
 
-You can install the dependencies using the following command:
+### Configuração
 
-```bash
-pip install -r requirements.txt
-```
+Antes de executar os scripts, certifique-se de que o arquivo `config.yaml` esteja configurado de acordo com o seu ambiente. Esse arquivo contém caminhos para armazenamento de dados, logs e configurações de formato para exportação de dados.
 
-#### Configuration
-
-Before running the scripts, ensure that the `config.yaml` file is set up according to your environment. This file contains paths for data storage, logging, and format settings for exporting data.
-
-**Example `config.yaml`**:
+**Exemplo de config.yaml**:
 
 ```yaml
-# Base URL for CNPJ dataset
-base_url: 'http://200.152.38.155/CNPJ/dados_abertos_cnpj/'
+# URL base para o conjunto de dados do CNPJ  
+base_url: 'http://200.152.38.155/CNPJ/dados_abertos_cnpj/'  
 
-# CSV Settings
-csv_sep: ';'
-csv_dec: ','
-csv_quote: '"'
-csv_enc: 'cp1252'
+# Configurações de CSV  
+csv_sep: ';'  
+csv_dec: ','  
+csv_quote: '"'  
+csv_enc: 'cp1252'  
 
-# Export format: Choose between 'csv', 'parquet', 'json', or 'feather'
-export_format: 'parquet'
+# Formato de exportação: Escolha entre 'csv', 'parquet', 'json' ou 'feather'  
+export_format: 'parquet'  
 
-# Data type definitions for each table
-dtypes:
-  empresas:
-    cnpj_basico: "str"
-    razao_social: "str"
-    natureza_juridica: "str"
-    qualificacao_do_responsavel: "str"
-    capital_social: "str"
-    porte_da_empresa: "str"
-    ente_federativo_resposavel: "str"
+# Definições de tipo de dado para cada tabela  
+dtypes:  
+  empresas:  
+    cnpj_basico: "str"  
+    razao_social: "str"  
+    natureza_juridica: "str"  
+    qualificacao_do_responsavel: "str"  
+    capital_social: "str"  
+    porte_da_empresa: "str"  
+    ente_federativo_resposavel: "str"  
 
-  estabelecimentos:
-    cnpj_basico: "str"
-    cnpj_ordem: "str"
-    cnpj_dv: "str"
-    identificador_matriz_filial: "str"
-    nome_fantasia: "str"
-    situacao_cadastral: "str"
-    data_situacao_cadastral: "str"
-    motivo_situacao_cadastral: "str"
-    nome_da_cidade_no_exterior: "str"
-    pais: "str"
-    data_de_inicio_da_atividade: "str"
-    cnae_fiscal_principal: "str"
-    cnae_fiscal_secundaria: "str"
-    tipo_de_logradouro: "str"
-    logradouro: "str"
-    numero: "str"
-    complemento: "str"
-    bairro: "str"
-    cep: "str"
-    uf: "str"
-    municipio: "str"
-    situacao_cadastral: "str"
-    ddd1: "str"
-    telefone1: "str"
-    ddd2: "str"
-    telefone2: "str"
-    ddd_do_fax: "str"
-    fax: "str"
-    correio_eletronico: "str"
-    situacao_especial: "str"
-    data_da_situacao_especial: "str"
-  ...
+  estabelecimentos:  
+    cnpj_basico: "str"  
+    cnpj_ordem: "str"  
+    cnpj_dv: "str"  
+    identificador_matriz_filial: "str"  
+    nome_fantasia: "str"  
+    situacao_cadastral: "str"  
+    data_situacao_cadastral: "str"  
+    motivo_situacao_cadastral: "str"  
+    nome_da_cidade_no_exterior: "str"  
+    pais: "str"  
+    data_de_inicio_da_atividade: "str"  
+    cnae_fiscal_principal: "str"  
+    cnae_fiscal_secundaria: "str"  
+    tipo_de_logradouro: "str"  
+    logradouro: "str"  
+    numero: "str"  
+    complemento: "str"  
+    bairro: "str"  
+    cep: "str"  
+    uf: "str"  
+    municipio: "str"  
+    situacao_cadastral: "str"  
+    ddd1: "str"  
+    telefone1: "str"  
+    ddd2: "str"  
+    telefone2: "str"  
+    ddd_do_fax: "str"  
+    fax: "str"  
+    correio_eletronico: "str"  
+    situacao_especial: "str"  
+    data_da_situacao_especial: "str"  
+  ...  
 ```
 
-### Part 1: Data Extraction
+## Parte 1: Extração de Dados
 
-To start the data extraction process, run the `cnpj_extractor.py` script. This script will download the CNPJ dataset for the latest available month, check file sizes, and avoid re-downloading files that already exist.
+Para iniciar o processo de extração de dados, execute o script `cnpj_extractor.py`. Este script fará o download do conjunto de dados do CNPJ para o mês mais recente disponível, verificará o tamanho dos arquivos e evitará o re-download de arquivos que já existam.
 
-**Run the extraction:**
+Execute a extração:
 
 ```bash
-python cnpj_extractor.py
+python cnpj_extractor.py  
 ```
 
-This will:
-- Download the partitioned datasets from the latest available month on the server.
-- Save them to the folder `data_incoming`.
+Isso irá:
 
-### Part 2: Data Merging
+- Baixar os conjuntos de dados particionados do mês mais recente disponível no servidor.
+- Salvá-los na pasta `data_incoming`.
 
-After extracting the data, the second part involves merging the partitioned tables into consolidated datasets.
+## Parte 2: Unificação de Dados
 
-To perform the merging, run the `cnpj_merger.py` script. This script reads the data files, processes them, and saves the merged data into the `data_outgoing` folder in the format you specified in `config.yaml`.
+Após a extração dos dados, a segunda parte envolve a unificação das tabelas particionadas em conjuntos de dados consolidados.
 
-**Run the merging process:**
+Para realizar a unificação, execute o script `cnpj_merger.py`. Esse script lê os arquivos de dados, os processa e salva os dados unificados na pasta `data_outgoing` no formato especificado no `config.yaml`.
+
+Execute o processo de unificação:
 
 ```bash
-python cnpj_merger.py
+python cnpj_merger.py  
 ```
 
-This will:
-- Merge partitioned data files (e.g., Empresas, Estabelecimentos, Socios) into a single dataset.
-- Save the merged dataset to the `data_outgoing` folder in your preferred format.
+Isso irá:
 
-### Customizing the Export Format
+- Unir os arquivos de dados particionados (por exemplo, Empresas, Estabelecimentos, Sócios) em um único conjunto de dados.
+- Salvar o conjunto de dados unificado na pasta `data_outgoing` no formato que você preferir.
 
-You can easily change the format of the exported files (e.g., CSV, Parquet, JSON) by modifying the `export_format` value in `config.yaml`. The supported formats are:
-- `csv`
-- `parquet`
-- `json`
-- `feather`
+## Personalizando o Formato de Exportação
 
-### Logging
+Você pode facilmente alterar o formato dos arquivos exportados (por exemplo, CSV, Parquet, JSON) modificando o valor de `export_format` no `config.yaml`. Os formatos suportados são:
 
-Logs are generated in the `logs` folder, with details on the download, extraction, and merging processes. This helps in tracking the progress of the data extraction and merging activities.
+- csv
+- parquet
+- json
+- feather
 
-### Contributing
+## Logs
 
-Contributions are welcome! If you encounter any bugs or have suggestions for new features or improvements, feel free to submit an issue or open a pull request.
+Os logs são gerados na pasta `logs`, com detalhes sobre os processos de download, extração e unificação. Isso ajuda a acompanhar o progresso das atividades de extração e unificação de dados.
 
-### License
+## Contribuindo
 
-This project is licensed under the MIT License.
+Contribuições são bem-vindas! Se você encontrar bugs ou tiver sugestões para novos recursos ou melhorias, sinta-se à vontade para enviar uma issue ou abrir um pull request.
 
----
+## Licença
 
-### Notes for Improvement
+Este projeto é licenciado sob a Licença MIT.
 
-- **Error Handling**: Further improvements could be added, such as retry mechanisms during downloads or handling of partially downloaded files.
-- **Parallel Processing**: The merging process can also be optimized using parallel processing techniques for handling large datasets.
+## Notas para Melhorias
 
-Let me know if you need additional details or further modifications to the README!
+- **Tratamento de Erros**: Melhorias adicionais podem ser incluídas, como mecanismos de tentativa de novo download ou tratamento de arquivos parcialmente baixados.
+- **Processamento Paralelo**: O processo de unificação também pode ser otimizado utilizando técnicas de processamento paralelo para lidar com grandes volumes de dados.
 
