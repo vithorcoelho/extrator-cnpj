@@ -17,12 +17,15 @@ The **CNPJ Data Extractor** is an open-source project that automates the process
 
 ```bash
 .
+├── config
+  ├── config.yaml         # Configuration file for paths, formats, and data types
 ├── data_incoming         # Folder for incoming ZIP data files
 ├── data_outgoing         # Folder for processed output data
 ├── logs                  # Folder for log files
-├── cnpj_extractor.py     # Script for data extraction (part 1)
-├── data_merger.py        # Script for merging partitioned tables (part 2)
-├── config.yaml           # Configuration file for paths, formats, and data types
+├── scrips                # Folder for python scripts
+  ├── cnpj_extractor.py   # Script for data extraction (part 1)
+  ├── cnpj_merger.py      # Script for merging partitioned tables (part 2)
+
 ├── README.md             # Project documentation
 ```
 
@@ -54,12 +57,6 @@ Before running the scripts, ensure that the `config.yaml` file is set up accordi
 # Base URL for CNPJ dataset
 base_url: 'http://200.152.38.155/CNPJ/dados_abertos_cnpj/'
 
-# Folders and Log Settings
-data_incoming_foldername: 'data_incoming'
-data_outgoing_foldername: 'data_outgoing'
-log_foldername: 'logs'
-log_filename: 'cnpj-extractor.log'
-
 # CSV Settings
 csv_sep: ';'
 csv_dec: ','
@@ -68,19 +65,6 @@ csv_enc: 'cp1252'
 
 # Export format: Choose between 'csv', 'parquet', 'json', or 'feather'
 export_format: 'parquet'
-
-# Prefixes for identifying table types
-prefixes:
-  empresas: 'Empresas'
-  estabelecimentos: 'Estabelecimentos'
-  socios: 'Socios'
-  cnaes: 'Cnaes'
-  motivos: 'Motivos'
-  municipios: 'Municipios'
-  natureza: 'Naturezas'
-  qualificacoes: 'Qualificacoes'
-  paises: 'Paises'
-  simples: 'Simples'
 
 # Data type definitions for each table
 dtypes:
