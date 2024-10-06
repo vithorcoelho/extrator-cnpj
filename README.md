@@ -123,7 +123,7 @@ python cnpj_extractor.py
 
 This will:
 - Download the partitioned datasets from the latest available month on the server.
-- Save them to the folder defined in `config.yaml` as `data_incoming`.
+- Save them to the folder defined in `data_incoming`.
 
 ### Part 2: Data Merging
 
