@@ -25,7 +25,6 @@ The **CNPJ Data Extractor** is an open-source project that automates the process
 ├── scrips                # Folder for python scripts
   ├── cnpj_extractor.py   # Script for data extraction (part 1)
   ├── cnpj_merger.py      # Script for merging partitioned tables (part 2)
-
 ├── README.md             # Project documentation
 ```
 
@@ -130,12 +129,12 @@ This will:
 
 After extracting the data, the second part involves merging the partitioned tables into consolidated datasets.
 
-To perform the merging, run the `data_merger.py` script. This script reads the partitioned data files, processes them, and saves the merged data into the `data_outgoing` folder in the format you specified in `config.yaml`.
+To perform the merging, run the `cnpj_merger.py` script. This script reads the partitioned data files, processes them, and saves the merged data into the `data_outgoing` folder in the format you specified in `config.yaml`.
 
 **Run the merging process:**
 
 ```bash
-python data_merger.py
+python cnpj_merger.py
 ```
 
 This will:
