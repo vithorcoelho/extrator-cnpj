@@ -40,12 +40,6 @@ The CNPJ Data Extractor is an open-source project that automates the process of 
   - bs4 (BeautifulSoup)
   - tqdm
 
-You can install the dependencies using the following command:
-
-```bash
-pip install -r requirements.txt  
-```
-
 ### Configuration
 
 Before running the scripts, make sure the `config.yaml` file is configured according to your environment. This file contains paths for data storage, logs, and format settings for data export.
