@@ -1,5 +1,9 @@
 # CNPJ Data Extractor
 
+## Video Tutorial
+
+Para uma apresentacao em video deste projeto, acesse: [CNPJ Data Extractor - Video Tutorial](https://www.youtube.com/watch?v=PQhjDoVe2vg)
+
 ## Visão Geral do Projeto
 O CNPJ Data Extractor é um projeto de código aberto que automatiza o processo de download, extração e transformação de conjuntos de dados do CNPJ (Cadastro Nacional da Pessoa Jurídica) a partir de fontes públicas disponíveis. O projeto é dividido em duas partes:
 
