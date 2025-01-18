@@ -1,0 +1,165 @@
+2025-01-17 14:39:56,964 | root | INFO | Starting script
+2025-01-17 14:39:56,964 | root | INFO | Mapping incoming files
+2025-01-17 14:39:56,964 | root | INFO | Reading from ZIP: Empresas0.zip
+2025-01-17 14:40:28,603 | root | INFO | Appending: Empresas0.zip
+2025-01-17 14:40:28,604 | root | INFO | Reading from ZIP: Empresas1.zip
+2025-01-17 14:40:33,689 | root | INFO | Appending: Empresas1.zip
+2025-01-17 14:40:33,690 | root | INFO | Reading from ZIP: Empresas2.zip
+2025-01-17 14:40:39,446 | root | INFO | Appending: Empresas2.zip
+2025-01-17 14:40:39,446 | root | INFO | Reading from ZIP: Empresas3.zip
+2025-01-17 14:40:44,875 | root | INFO | Appending: Empresas3.zip
+2025-01-17 14:40:44,875 | root | INFO | Reading from ZIP: Empresas4.zip
+2025-01-17 14:40:50,512 | root | INFO | Appending: Empresas4.zip
+2025-01-17 14:40:50,512 | root | INFO | Reading from ZIP: Empresas5.zip
+2025-01-17 14:40:56,165 | root | INFO | Appending: Empresas5.zip
+2025-01-17 14:40:56,165 | root | INFO | Reading from ZIP: Empresas6.zip
+2025-01-17 14:41:01,856 | root | INFO | Appending: Empresas6.zip
+2025-01-17 14:41:01,856 | root | INFO | Reading from ZIP: Empresas7.zip
+2025-01-17 14:41:07,622 | root | INFO | Appending: Empresas7.zip
+2025-01-17 14:41:07,622 | root | INFO | Reading from ZIP: Empresas8.zip
+2025-01-17 14:41:13,297 | root | INFO | Appending: Empresas8.zip
+2025-01-17 14:41:13,297 | root | INFO | Reading from ZIP: Empresas9.zip
+2025-01-17 14:41:18,919 | root | INFO | Appending: Empresas9.zip
+2025-01-17 14:41:26,950 | root | INFO | Exporting: empresas
+2025-01-17 14:48:48,568 | root | INFO | Starting script
+2025-01-17 14:48:48,568 | root | INFO | Mapping incoming files
+2025-01-17 14:49:05,720 | root | INFO | Starting script
+2025-01-17 14:49:05,721 | root | INFO | Mapping incoming files
+2025-01-17 14:49:47,720 | root | INFO | Starting script
+2025-01-17 14:49:47,720 | root | INFO | Mapping incoming files
+2025-01-17 15:05:47,846 | root | INFO | Iniciando script
+2025-01-17 15:05:47,987 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Cnaes.zip
+2025-01-17 15:05:48,001 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Cnaes.zip: table cnaes has no column named 0111301
+2025-01-17 15:05:48,002 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas0.zip
+2025-01-17 15:05:48,171 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas0.zip: table empresas has no column named 41273592
+2025-01-17 15:05:48,180 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas1.zip
+2025-01-17 15:05:48,335 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas1.zip: table empresas has no column named 00000000
+2025-01-17 15:05:48,343 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas2.zip
+2025-01-17 15:05:48,496 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas2.zip: table empresas has no column named 04631961
+2025-01-17 15:05:48,505 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas3.zip
+2025-01-17 15:05:48,662 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas3.zip: table empresas has no column named 09253555
+2025-01-17 15:05:48,670 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas4.zip
+2025-01-17 15:05:48,832 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas4.zip: table empresas has no column named 13846070
+2025-01-17 15:05:48,841 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas5.zip
+2025-01-17 15:05:49,006 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas5.zip: table empresas has no column named 18421570
+2025-01-17 15:05:49,015 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas6.zip
+2025-01-17 15:05:49,181 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas6.zip: table empresas has no column named 22967214
+2025-01-17 15:05:49,190 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas7.zip
+2025-01-17 15:05:49,359 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas7.zip: table empresas has no column named 27499605
+2025-01-17 15:05:49,369 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas8.zip
+2025-01-17 15:05:49,535 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas8.zip: table empresas has no column named 32066828
+2025-01-17 15:05:49,545 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas9.zip
+2025-01-17 15:05:49,708 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Empresas9.zip: table empresas has no column named 36627972
+2025-01-17 15:05:49,717 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Estabelecimentos0.zip
+2025-01-17 15:05:50,321 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Estabelecimentos0.zip: table estabelecimentos has no column named 37220018
+2025-01-17 15:05:50,362 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Estabelecimentos1.zip
+2025-01-17 15:05:57,999 | root | ERROR | Erro ao processar C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Estabelecimentos1.zip: table estabelecimentos has no column named 07396865
+2025-01-17 15:05:58,030 | root | INFO | Processando ZIP: C:\Users\Joao Vithor\Desktop\cnpj-data-extractor\data_incoming\Estabelecimentos2.zip
+2025-01-17 19:06:37,561 | root | INFO | Starting script
+2025-01-17 19:06:37,637 | root | INFO | Processing Empresas1.zip
+2025-01-17 19:08:29,142 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:08:31,219 | root | INFO | Script finished
+2025-01-17 19:16:17,801 | root | INFO | Starting script
+2025-01-17 19:16:17,827 | root | INFO | Processing Empresas1.zip
+2025-01-17 19:19:21,157 | root | INFO | Starting script
+2025-01-17 19:19:21,158 | root | INFO | Processing Empresas1.zip
+2025-01-17 19:19:46,579 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:19:46,605 | root | INFO | Processing Motivos.zip
+2025-01-17 19:19:46,644 | root | INFO | Processing Municipios.zip
+2025-01-17 19:19:46,686 | root | INFO | Processing Naturezas.zip
+2025-01-17 19:19:46,722 | root | INFO | Processing Qualificacoes.zip
+2025-01-17 19:19:46,751 | root | INFO | Processing Paises.zip
+2025-01-17 19:19:46,787 | root | INFO | Processing Simples.zip
+2025-01-17 19:53:13,577 | root | INFO | Starting script
+2025-01-17 19:53:13,606 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:53:13,626 | root | INFO | Processing Motivos.zip
+2025-01-17 19:53:13,642 | root | INFO | Processing Municipios.zip
+2025-01-17 19:53:13,667 | root | INFO | Processing Naturezas.zip
+2025-01-17 19:53:13,681 | root | INFO | Processing Qualificacoes.zip
+2025-01-17 19:53:13,695 | root | INFO | Processing Paises.zip
+2025-01-17 19:53:13,709 | root | INFO | Script finished
+2025-01-17 19:53:49,506 | root | INFO | Starting script
+2025-01-17 19:53:49,508 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:53:49,523 | root | INFO | Processing Motivos.zip
+2025-01-17 19:53:49,531 | root | INFO | Processing Municipios.zip
+2025-01-17 19:53:49,549 | root | INFO | Processing Naturezas.zip
+2025-01-17 19:53:49,558 | root | INFO | Processing Qualificacoes.zip
+2025-01-17 19:53:49,566 | root | INFO | Processing Paises.zip
+2025-01-17 19:53:49,575 | root | INFO | Script finished
+2025-01-17 19:54:00,009 | root | INFO | Starting script
+2025-01-17 19:54:00,037 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:54:00,059 | root | INFO | Processing Motivos.zip
+2025-01-17 19:54:00,074 | root | INFO | Processing Municipios.zip
+2025-01-17 19:54:00,101 | root | INFO | Processing Naturezas.zip
+2025-01-17 19:54:00,117 | root | INFO | Processing Qualificacoes.zip
+2025-01-17 19:54:00,131 | root | INFO | Processing Paises.zip
+2025-01-17 19:54:00,146 | root | INFO | Script finished
+2025-01-17 19:54:08,300 | root | INFO | Starting script
+2025-01-17 19:54:08,329 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:54:08,350 | root | INFO | Processing Motivos.zip
+2025-01-17 19:54:08,365 | root | INFO | Processing Municipios.zip
+2025-01-17 19:54:08,390 | root | INFO | Processing Naturezas.zip
+2025-01-17 19:54:08,405 | root | INFO | Processing Qualificacoes.zip
+2025-01-17 19:54:08,419 | root | INFO | Processing Paises.zip
+2025-01-17 19:54:08,433 | root | INFO | Script finished
+2025-01-17 19:56:07,156 | root | INFO | Starting script
+2025-01-17 19:56:07,187 | root | INFO | Processing Socios1.zip
+2025-01-17 19:56:21,810 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:56:21,834 | root | INFO | Processing Motivos.zip
+2025-01-17 19:56:21,859 | root | INFO | Processing Municipios.zip
+2025-01-17 19:56:21,900 | root | INFO | Processing Naturezas.zip
+2025-01-17 19:56:21,925 | root | INFO | Processing Qualificacoes.zip
+2025-01-17 19:56:21,940 | root | INFO | Processing Paises.zip
+2025-01-17 19:56:21,960 | root | INFO | Script finished
+2025-01-17 19:57:58,652 | root | INFO | Starting script
+2025-01-17 19:57:58,667 | root | INFO | Processing Empresas2.zip
+2025-01-17 19:59:02,406 | root | INFO | Processing Socios1.zip
+2025-01-17 19:59:54,464 | root | INFO | Processing Cnaes.zip
+2025-01-17 19:59:54,718 | root | INFO | Processing Motivos.zip
+2025-01-17 19:59:54,892 | root | INFO | Processing Municipios.zip
+2025-01-17 19:59:55,096 | root | INFO | Processing Naturezas.zip
+2025-01-17 19:59:55,291 | root | INFO | Processing Qualificacoes.zip
+2025-01-17 19:59:55,647 | root | INFO | Processing Paises.zip
+2025-01-17 19:59:55,832 | root | INFO | Script finished
+2025-01-17 20:03:56,449 | root | INFO | Starting script
+2025-01-17 20:03:56,450 | root | INFO | Processing Empresas0.zip
+2025-01-17 20:04:13,669 | root | INFO | Starting script
+2025-01-17 20:04:13,906 | root | INFO | Processing Empresas0.zip
+2025-01-17 20:07:30,415 | root | INFO | Processing Empresas2.zip
+2025-01-17 20:07:57,972 | root | INFO | Processing Empresas3.zip
+2025-01-17 20:08:26,579 | root | INFO | Processing Empresas4.zip
+2025-01-17 20:09:01,009 | root | INFO | Processing Empresas5.zip
+2025-01-17 20:10:58,570 | root | INFO | Processing Empresas6.zip
+2025-01-17 20:14:11,984 | root | INFO | Processing Empresas7.zip
+2025-01-17 20:15:07,784 | root | INFO | Processing Empresas8.zip
+2025-01-17 20:15:47,486 | root | INFO | Processing Empresas9.zip
+2025-01-17 20:16:19,884 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-17 20:21:19,321 | root | INFO | Starting script
+2025-01-17 20:21:19,323 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-17 20:21:51,967 | root | INFO | Starting script
+2025-01-17 20:21:51,969 | root | INFO | Processing Empresas9.zip
+2025-01-17 20:24:03,854 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:04:20,997 | root | INFO | Starting script
+2025-01-18 18:04:21,034 | root | INFO | Processing Empresas0.zip
+2025-01-18 18:04:55,087 | root | INFO | Starting script
+2025-01-18 18:04:55,089 | root | INFO | Processing Empresas0.zip
+2025-01-18 18:05:05,171 | root | INFO | Starting script
+2025-01-18 18:05:05,188 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:07:29,690 | root | INFO | Starting script
+2025-01-18 18:07:29,691 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:07:34,450 | root | INFO | Starting script
+2025-01-18 18:07:34,451 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:07:51,898 | root | INFO | Starting script
+2025-01-18 18:07:51,924 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:09:26,107 | root | INFO | Starting script
+2025-01-18 18:09:26,108 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:18:37,801 | root | INFO | Starting script
+2025-01-18 18:18:37,947 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:19:08,772 | root | INFO | Starting script
+2025-01-18 18:19:08,774 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:20:08,780 | root | INFO | Starting script
+2025-01-18 18:20:09,385 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:21:15,241 | root | INFO | Starting script
+2025-01-18 18:21:15,946 | root | INFO | Processing Estabelecimentos0.zip
+2025-01-18 18:30:21,929 | root | INFO | Processing Cnaes.zip
+2025-01-18 18:30:22,697 | root | INFO | Script finished

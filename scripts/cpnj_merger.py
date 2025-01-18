@@ -117,7 +117,8 @@ for root, directories, files in os.walk(path_incoming):
             for prefix in file_params:
                 if file_with_no_ext.startswith(prefix.title()):
                     file_params[prefix].append([zip_file_path, filename, file_with_no_ext])
-
+                    print(prefix.title())
+"""
 # Processing and exporting files for all tables
 for prefix, params in file_params.items():
     dtypes_var = dtypes[prefix]  # Get dtypes for the prefix
@@ -125,4 +126,4 @@ for prefix, params in file_params.items():
     logging.info(f'Exporting: {prefix}')
     print(f'Exporting: {prefix}')
     outgoing_file_path = os.path.join(path_outgoing, prefix + '.' + export_format)
-    export_dataframe(df_merged, outgoing_file_path)
+    export_dataframe(df_merged, outgoing_file_path)"""

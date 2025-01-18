@@ -23,6 +23,8 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import yaml
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 ########################## Load Configurations ##########################
 data_incoming_foldername = 'data_incoming'
@@ -71,13 +73,13 @@ def get_remote_file_size(url):
 def get_latest_month_folder(url):
     """Fetch the folder list from the URL and return the latest (most recent) month folder."""
     try:
-        response = requests.get(url)
+        response = requests.get(url, verify=False)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         # Find all links to directories (usually ending with /)
         directories = [a['href'] for a in soup.find_all('a', href=True) if a['href'].endswith('/')]
         # Sort directories to find the most recent one
-        latest_folder = sorted(directories, reverse=True)[0]
+        latest_folder = sorted(directories, reverse=True)[1]
         return latest_folder.strip('/')
     except requests.exceptions.RequestException as e:
         logging.error(f"Failed to fetch directories: {e}")
@@ -175,6 +177,9 @@ if latest_folder:
         
         # Get available threads/CPU cores
         available_threads = get_available_threads()
+
+        available_threads = 1
+        
         tqdm.write(f"Number of available threads (CPU cores): {available_threads}")
         
         # Set up the ThreadPoolExecutor to download files in parallel
